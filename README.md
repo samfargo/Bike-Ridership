@@ -10,23 +10,21 @@ Motivate publishes monthly data about each ride, from start time, end time, dura
 
 For this visualization I have chosen a heatmap. A heatmap is a data visualization technique that displays numeric tabular data as a color-encoded matrix, where the color of each cell depends upon its value. Heatmaps are great for identifying trends in large amounts of data at a glance, particularly when the data is ordered and there is clustering. Heatmaps should not be used when comparing multiple groups of observations. In this case, comparing ridership data in June vs July.
 
-A common alternative to heatmaps is a grouped bar chart. Each row of the heatmap would be a cluster of bars, with each bar’s height reflecting its corresponding value. Bars are colored so column values can be tracked between groups. Though grouped bar charts are a poor choice when there are several bars to be plotted. The heatmap is compact and outlines general patterns between both axis variables better.
-
 <font size="5">**Visualization Library**</font>
 
 The library I have chosen to visualize the heatmap with is Seaborn. This library generates lovely heatmaps and offers a great balance between effort and beauty. Right out of the box the heatmap is plotted with an excellent color scheme and style parameters which allow for more effective visuals and thus analysis. It's declarative nature allows for more focus on what the elements of the plot mean, rather than how to draw them. It is also closely integrated with pandas data structures in the Jupyter Notebook. One can easily build a plot referencing columns from a DataFrame. Seaborn alone cannot build interactive visualiztions which poses limitations. Though I am not creating an interactive visualiztion and that is partly why I opted for Seaborn over other libraries such as Bokeh and Plotly. Seaborn provides necessary emphasis on aesthetics for heatmaps, as well as ease of creation.
 
-Seaborn is an open-source Python visualization library built on top of matplotlib. Seaborn's default styles and color palettes are designed to be more aesthetically pleasing, and are what differentiates it from matplotlib. The library was created by Michael Waskom. 
+Seaborn is an open-source [Python](https://www.python.org/downloads/) visualization library built on top of matplotlib. 
 
 To install Seaborn, type the following command:
 
-<em>pip install seaborn</em>
+`pip install seaborn`
 
 (Note: The following are required dependencies: numpy, scipy, pandas, matplotlib)
 
 <font size="5">**Demonstration**</font>
 
-The data comes from June 2019 (https://s3.amazonaws.com/hubway-data/index.html) on the Bluebikes website (https://www.bluebikes.com/system-data). I wanted to select a warm month and prior to COVID-19, both in an effort to capture a large dataset. It includes the following variables:
+The data comes from [June 2019](https://s3.amazonaws.com/hubway-data/index.html) on the [Bluebikes website](https://www.bluebikes.com/system-data). I wanted to select a warm month and prior to COVID-19, both in an effort to capture a large dataset. It includes the following variables:
 
 - Trip Duration (seconds)
 - Start Time and Date
